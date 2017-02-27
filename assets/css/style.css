@@ -1,0 +1,27 @@
+@import "font.css";
+
+body {
+  font: normal 16px "Input Sans Narrow Light", Helvetica, sans-serif;
+  background: #fff;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+main {
+  width: 60%;
+  margin: 0 auto;
+  min-height: 25vh;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 20px;
+}
+
+main h1 {
+  font-family: "Input Sans Narrow Medium", Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+main p {
+  color: #000;
+}
