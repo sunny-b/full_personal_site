@@ -6,7 +6,9 @@ gem 'sinatra'
 gem 'sinatra-contrib'
 gem 'erubis'
 gem 'rack'
+gem 'rake'
 gem 'minitest'
+gem 'minitest-reporters'
 
 group :production do
   gem 'puma'
