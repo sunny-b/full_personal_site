@@ -48,12 +48,14 @@
       currentColorRight();
     }
     function renderColors() {
-      $('.gradient, .gradient-text a, .gradient-text a:hover').css({ background: "-webkit-gradient(linear, left top, right top, from(" + colorLeft + "), to(" + colorRight + "))" })
+      // Remove background style for links when not hovering
+      $('.gradient-text a').css({ background: ''});
+      // Add background gradient
+      $('.gradient, .gradient-text a:hover').css({ background: "-webkit-gradient(linear, left top, right top, from(" + colorLeft + "), to(" + colorRight + "))" })
               .css({ background: "-moz-linear-gradient(left, " + colorLeft + " 0%, " + colorRight + " 100%)" });
-
+      // Readjust background for text
       $('.gradient-text, .gradient-text a').css({ webkitBackgroundClip: 'text' })
                  .css({ webkitTextFillColor: 'transparent' });
-
       $('.gradient-text a:hover').css({ webkitTextFillColor: 'white' });
     // $('body').css({ background: "radial-gradient(" + colorLeft + ", " + colorRight + ")" })
     //          .css({ background: "-moz-radial-gradient(" + colorLeft + " 0%, " + colorRight + " 100%)" });
