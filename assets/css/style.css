@@ -39,13 +39,13 @@ main p {
   color: #000;
 }
 
-main p a {
+.gradient-text a {
  border-bottom: 1px solid #ccc;
  text-decoration: none;
  -webkit-background-clip: text !important;
 }
 
-main p a:hover {
+.gradient-text a:hover {
   -webkit-background-clip: border-box !important;
 }
 
