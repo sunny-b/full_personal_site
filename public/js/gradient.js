@@ -11,7 +11,7 @@
                           [251, 77, 48],
                           [232, 100, 167] );
   var step = 0;
-  var gradientSpeed = 0.005;
+  var gradientSpeed = 0.0075;
   var colorIndices = [];
 
   for (var i = 0; i < 5; i++) {
@@ -29,7 +29,7 @@
       return Math.round(counterStep * initial[num] + step * target[num]);
     }
     function buildRGBString(red, green, blue) {
-      return "rgba(" + red + "," + green + "," + blue + ", .5)";
+      return "rgba(" + red + "," + green + "," + blue + ", .7)";
     }
     function currentColorLeft() {
       redLeft = calcColor(initialColor1L, targetColor1L, 0);
@@ -105,5 +105,5 @@
     }
   }
 
-  setInterval(updateGradient, 50);
+  setInterval(updateGradient, 100);
 }();
