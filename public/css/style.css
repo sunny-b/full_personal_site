@@ -5,7 +5,7 @@
     General
   ******************/
   body {
-    font: normal 20px/160% "Input Sans Narrow Light", Helvetica, sans-serif;
+    font: normal 16px/160% "Input Sans Narrow Light", Helvetica, sans-serif;
     padding: 0;
     margin: 0;
     z-index: -3;
@@ -35,7 +35,7 @@
   }
 
   #homepage .info h1 {
-    font-size: 36px;
+    font-size: 25px;
     line-height: 150%;
     font-weight: 100;
     padding-bottom: 30px;
@@ -46,6 +46,7 @@
   }
 
   .gradient-text a {
+   padding: 0 5px;
    border-bottom: 1px solid #ccc;
    text-decoration: none;
    -webkit-background-clip: text !important;
@@ -73,7 +74,7 @@
     width: 28px;
     height: 19px;
     text-indent: -9999px;
-    margin: 40px auto 0;
+    margin-top: 40px;
   }
 
   .arrow .desktop, .arrow .mobile {
@@ -95,32 +96,30 @@
     background-size: 65px;
   }
 
-@media (min-width: 671px) {
-  /*******************
-    General
-  ******************/
-
+@media (min-width: 375px) {
   body {
     font-size: 20px;
   }
 
+  #homepage .info h1 {
+    font-size: 36px;
+  }
+}
 
+@media (min-width: 671px) {
   /*******************
     Main
   ******************/
 
   #homepage .info {
-    width: 100%;
     max-width: 720px;
-    min-width: 570px;
     height: 83vh;
-    margin-left: 65px;
-    margin-top: 0;
+    margin: 0 0 0 5%;
+
     padding: 98px 63px 0;
   }
 
   #homepage .info h1 {
-    font-size: 36px;
     padding-bottom: 40px;
   }
 
