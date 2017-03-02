@@ -95,35 +95,11 @@
     background-size: 65px;
   }
 
-  /*******************
-    Homepage Background Images
-  ******************/
-
-  #homepage .background-slideshow {
-    display: block;
-    position: absolute;
-    width: 50vw;
-    left: 50%;
-    top: 290px;
-    transform: translateY(-50%);
-    z-index: 10;
-  }
-
-  #homepage .background-slideshow img {
-    width: 100%;
-    display: none;
-    opacity: 0;
-  }
-
-  #homepage .background-slideshow img.active {
-    display: block;
-    opacity: 1;
-  }
-
 @media (min-width: 671px) {
   /*******************
     General
   ******************/
+
   body {
     font-size: 20px;
   }
