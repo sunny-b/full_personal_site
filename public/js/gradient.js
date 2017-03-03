@@ -3,20 +3,18 @@
     return Math.floor(Math.random() * (colors.length - 1));
   }
 
-  var colors = new Array( [232, 100, 167],
-                          [150, 51, 244],
-                          [100, 149, 231],
-                          [51, 224, 207],
-                          [162, 215, 67],
-                          [251, 77, 48],
-                          [232, 100, 167] );
+  var colors = new Array( [17, 40, 76],
+                          [81, 119, 15],
+                          [119, 15, 15],
+                          [96, 37, 46],
+                          [23, 93, 109] );
   var step = 0;
-  var gradientSpeed = 0.0075;
-  var colorIndices = [];
+  var gradientSpeed = 0.01;
+  var colorIndices = [0, 1, 2, 3];
 
-  for (var i = 0; i < 5; i++) {
-    colorIndices.push(randIdx());
-  }
+  // for (var i = 0; i < 5; i++) {
+  //   colorIndices.push(randIdx());
+  // }
 
   function updateGradient() {
     function assignInitTargColors() {
@@ -105,5 +103,5 @@
     }
   }
 
-  setInterval(updateGradient, 100);
+  setInterval(updateGradient, 500);
 }();
