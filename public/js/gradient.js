@@ -10,11 +10,11 @@
                           [23, 93, 109] );
   var step = 0;
   var gradientSpeed = 0.01;
-  var colorIndices = [0, 1, 2, 3];
+  var colorIndices = [];
 
-  // for (var i = 0; i < 5; i++) {
-  //   colorIndices.push(randIdx());
-  // }
+  for (var i = 0; i < 5; i++) {
+    colorIndices.push(randIdx());
+  }
 
   function updateGradient() {
     function assignInitTargColors() {
@@ -22,12 +22,6 @@
       targetColor1L = colors[colorIndices[1]];
       initialColor2L = colors[colorIndices[2]];
       targetColor2L = colors[colorIndices[3]];
-    }
-    function calcColor(initial, target, num) {
-      return Math.round(counterStep * initial[num] + step * target[num]);
-    }
-    function buildRGBString(red, green, blue) {
-      return "rgba(" + red + "," + green + "," + blue + ", .7)";
     }
     function currentColorLeft() {
       redLeft = calcColor(initialColor1L, targetColor1L, 0);
@@ -45,20 +39,6 @@
       currentColorLeft();
       currentColorRight();
     }
-    function renderColors() {
-      // Remove background style for links when not hovering
-      $('.gradient-text a').css({ background: ''});
-      // Add background gradient
-      $('.gradient, .gradient-text a:hover').css({ background: "-webkit-gradient(linear, left top, right top, from(" + colorLeft + "), to(" + colorRight + "))" })
-              .css({ background: "-moz-linear-gradient(left, " + colorLeft + " 0%, " + colorRight + " 100%)" });
-      // Readjust background for text
-      $('.gradient-text, .gradient-text a').css({ webkitBackgroundClip: 'text' })
-                 .css({ webkitTextFillColor: 'transparent' });
-      $('.gradient-text a:hover').css({ webkitTextFillColor: 'white' });
-    // $('body').css({ background: "radial-gradient(" + colorLeft + ", " + colorRight + ")" })
-    //          .css({ background: "-moz-radial-gradient(" + colorLeft + " 0%, " + colorRight + " 100%)" });
-
-    }
     function reassignColors() {
       step %= 1;
       colorIndices[0] = colorIndices[1];
@@ -67,11 +47,17 @@
       colorIndices[1] = randomIndex(colorIndices[1]);
       colorIndices[3] = randomIndex(colorIndices[3]);
     }
+    function randomNum(prevIndex) {
+      return prevIndex + Math.floor(1 + Math.random() * (colors.length - 1));
+    }
     function randomIndex(prevIndex) {
       return randomNum(prevIndex) % colors.length;
     }
-    function randomNum(prevIndex) {
-      return prevIndex + Math.floor(1 + Math.random() * (colors.length - 1));
+    function calcColor(initial, target, num) {
+      return Math.round(counterStep * initial[num] + step * target[num]);
+    }
+    function buildRGBString(red, green, blue) {
+      return "rgba(" + red + "," + green + "," + blue + ", .7)";
     }
 
     if ($===undefined) return;
@@ -94,14 +80,55 @@
 
     assignInitTargColors();
     calcCurrentColors();
-    renderColors();
 
     step += gradientSpeed;
 
     if (step >= 1) {
       reassignColors();
     }
+
+    return [colorLeft, colorRight];
   }
 
-  setInterval(updateGradient, 500);
+  function renderColors() {
+    var colors = updateGradient();
+    var colorLeft = colors[0];
+    var colorRight = colors[1];
+
+
+    // Add background gradient
+    $('.gradient').css({ background: "-webkit-gradient(linear, left top, right top, from(" + colorLeft + "), to(" + colorRight + "))" })
+                  .css({ background: "-moz-linear-gradient(left, " + colorLeft + " 0%, " + colorRight + " 100%)" });
+    // Readjust background for text
+    $('.gradient-text').css({ webkitBackgroundClip: 'text' })
+                       .css({ webkitTextFillColor: 'transparent' });
+
+     $('.gradient-text a').hover(function() {
+       // var colors = updateGradient();
+
+       $(this).css({ background: "-webkit-gradient(linear, left top, right top, from(" + colorLeft + "), to(" + colorRight + "))" })
+              .css({ background: "-moz-linear-gradient(left, " + colorLeft + " 0%, " + colorRight + " 100%)" })
+              .css({ webkitTextFillColor: 'white' });
+     }, function () {
+       $(this).css({ webkitBackgroundClip: 'text' })
+              .css({ webkitTextFillColor: 'transparent' })
+              .css({ background: ''});
+     });
+    // $('body').css({ background: "radial-gradient(" + colorLeft + ", " + colorRight + ")" })
+    //          .css({ background: "-moz-radial-gradient(" + colorLeft + " 0%, " + colorRight + " 100%)" });
+  }
+
+  $('.gradient-text a').hover(function() {
+    // var colors = updateGradient();
+
+    $(this).css({ background: "-webkit-gradient(linear, left top, right top, from(" + colors[0] + "), to(" + colors[1] + "))" })
+           .css({ background: "-moz-linear-gradient(left, " + colors[0] + " 0%, " + colors[1] + " 100%)" })
+           .css({ webkitTextFillColor: 'white' });
+  }, function () {
+    $(this).css({ webkitBackgroundClip: 'text' })
+           .css({ webkitTextFillColor: 'transparent' })
+           .css({ background: ''});
+  });
+
+  setInterval(renderColors, 500);
 }();

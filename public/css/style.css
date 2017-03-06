@@ -21,6 +21,7 @@
     margin: 0;
   }
 
+
   /*******************
     Main info
   ******************/
@@ -32,6 +33,14 @@
     padding: 20px;
     position: relative;
     z-index: 20;
+  }
+
+  #homepage .info figure {
+    width: 300px;
+  }
+
+  #homepage .info img {
+    width: 100%;
   }
 
   #homepage .info h1 {

@@ -28,29 +28,19 @@
 }
 
 
-ul.front-end.active span {
+ul.full-stack.active span {
   -webkit-backface-visibility: hidden;
-  -webkit-animation: imageAnimation 28s linear infinite 0s forwards;
-  -moz-animation: imageAnimation 28s linear infinite 0s forwards;
-  -o-animation: imageAnimation 28s linear infinite 0s forwards;
-  -ms-animation: imageAnimation 28s linear infinite 0s forwards;
-  animation: imageAnimation 28s linear infinite 0s forwards;
+  -webkit-animation: imageAnimation 32s linear infinite 0s forwards;
+  -moz-animation: imageAnimation 32s linear infinite 0s forwards;
+  -o-animation: imageAnimation 32s linear infinite 0s forwards;
+  -ms-animation: imageAnimation 32s linear infinite 0s forwards;
+  animation: imageAnimation 32s linear infinite 0s forwards;
 }
 
-
-ul.back-end.active span {
-  -webkit-backface-visibility: hidden;
-  -webkit-animation: gifAnimation 12s linear infinite 0s forwards;
-  -moz-animation: gifAnimation 12s linear infinite 0s forwards;
-  -o-animation: gifAnimation 12s linear infinite 0s forwards;
-  -ms-animation: gifAnimation 12s linear infinite 0s forwards;
-  animation: gifAnimation 12s linear infinite 0s forwards;
-}
-
-ul.front-end.active li:nth-child(1) span {
+ul.full-stack.active li:nth-child(1) span {
   background-image: url(../images/main_exhibit_edited.png);
 }
-ul.front-end.active li:nth-child(2) span {
+ul.full-stack.active li:nth-child(2) span {
   background-image: url(../images/main_theo.png);
   -webkit-animation-delay: 4s;
   -moz-animation-delay: 4s;
@@ -58,7 +48,7 @@ ul.front-end.active li:nth-child(2) span {
   -ms-animation-delay: 4s;
   animation-delay: 4s;
 }
-ul.front-end.active li:nth-child(3) span {
+ul.full-stack.active li:nth-child(3) span {
   background-image: url(../images/main_dotufo_edited.png);
   -webkit-animation-delay: 7s;
   -moz-animation-delay: 7s;
@@ -66,7 +56,7 @@ ul.front-end.active li:nth-child(3) span {
   -ms-animation-delay: 7s;
   animation-delay: 7s;
 }
-ul.front-end.active li:nth-child(4) span {
+ul.full-stack.active li:nth-child(4) span {
   background-image: url(../images/main_shake_edited.png);
   -webkit-animation-delay: 10s;
   -moz-animation-delay: 10s;
@@ -74,7 +64,7 @@ ul.front-end.active li:nth-child(4) span {
   -ms-animation-delay: 10s;
   animation-delay: 10s;
 }
-ul.front-end.active li:nth-child(5) span {
+ul.full-stack.active li:nth-child(5) span {
   background-image: url(../images/main_zaha_edited.png);
   -webkit-animation-delay: 13s;
   -moz-animation-delay: 13s;
@@ -82,7 +72,7 @@ ul.front-end.active li:nth-child(5) span {
   -ms-animation-delay: 13s;
   animation-delay: 13s;
 }
-ul.front-end.active li:nth-child(6) span {
+ul.full-stack.active li:nth-child(6) span {
   background-image: url(../images/main_finger_edited.png);
   -webkit-animation-delay: 16s;
   -moz-animation-delay: 16s;
@@ -90,7 +80,7 @@ ul.front-end.active li:nth-child(6) span {
   -ms-animation-delay: 16s;
   animation-delay: 16s;
 }
-ul.front-end.active li:nth-child(7) span {
+ul.full-stack.active li:nth-child(7) span {
   background-image: url(../images/gallery_edited.png);
   -webkit-animation-delay: 19s;
   -moz-animation-delay: 19s;
@@ -98,7 +88,7 @@ ul.front-end.active li:nth-child(7) span {
   -ms-animation-delay: 19s;
   animation-delay: 19s;
 }
-ul.front-end.active li:nth-child(8) span {
+ul.full-stack.active li:nth-child(8) span {
   background-image: url(../images/ropetype_edited.png);
   -webkit-animation-delay: 22s;
   -moz-animation-delay: 22s;
@@ -106,7 +96,7 @@ ul.front-end.active li:nth-child(8) span {
   -ms-animation-delay: 22s;
   animation-delay: 22s;
 }
-ul.front-end.active li:nth-child(9) span {
+ul.full-stack.active li:nth-child(9) span {
   background-image: url(../images/last_ropetype_edited.png);
   -webkit-animation-delay: 25s;
   -moz-animation-delay: 25s;
@@ -115,18 +105,15 @@ ul.front-end.active li:nth-child(9) span {
   animation-delay: 25s;
 }
 
-
-ul.back-end.active li:nth-child(1) span {
+ul.full-stack.active li:nth-child(10) span {
   background-image: url(../images/whackaruby.gif);
+  -webkit-animation-delay: 28s;
+  -moz-animation-delay: 28s;
+  -o-animation-delay: 28s;
+  -ms-animation-delay: 28s;
+  animation-delay: 28s;
 }
 /* Animation for the slideshow images */
-@-webkit-keyframes gifAnimation {
-  0% { opacity: 1;
-  -webkit-animation-timing-function: ease-in; }
-  100% { opacity: 1;
-       -webkit-animation-timing-function: ease-out; }
-}
-
 @-webkit-keyframes imageAnimation {
   0% { opacity: 0;
   -webkit-animation-timing-function: ease-in; }

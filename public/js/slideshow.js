@@ -1,13 +1,7 @@
 !function() {
-  $('a.front-end').hover(function() {
-    $('ul.front-end').addClass('active');
+  $('a.full-stack').hover(function() {
+    $('ul.full-stack').addClass('active');
   }, function() {
-    $('ul.front-end').removeClass('active');
-  });
-
-  $('a.back-end').hover(function() {
-    $('ul.back-end').addClass('active');
-  }, function() {
-    $('ul.back-end').removeClass('active');
+    $('ul.full-stack').removeClass('active');
   });
 }();

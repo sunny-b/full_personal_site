@@ -7,6 +7,7 @@ require 'puma'
 configure(:development) do
   require 'sinatra/reloader'
   require 'pry'
+  also_reload 'public/css/style.css'
 end
 
 get '/' do
