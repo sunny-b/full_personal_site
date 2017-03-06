@@ -17,7 +17,7 @@ body {
 
 .fixed {
   position: fixed;
-  top: 52px;
+  top: 72px;
   left: 0;
   width: 100%;
 }
@@ -34,7 +34,7 @@ header {
   overflow: hidden;
   width: 100%;
   box-sizing: border-box;
-  padding: 20px 20px 0 20px;
+  padding: 20px;
   margin-bottom: 20px;
   position: fixed;
   z-index: 100;
@@ -50,9 +50,12 @@ header .icon a {
   display: block;
   width: 100%;
   height: 100%;
-  background: url('/images/foggy-full-moon-night.svg') 0 0 no-repeat;
-  background-size: cover;
-  text-indent: -9999px;
+  /*background: url('/images/foggy-full-moon-night.svg') 0 0 no-repeat;*/
+  /*background-size: cover;*/
+}
+
+header .icon img {
+  width: 100%;
 }
 
 header .blog {
@@ -90,6 +93,10 @@ header .blog a {
   padding-bottom: 30px;
 }
 
+#homepage .info p + p {
+  padding-top: 10%;
+}
+
 .gradient-text a {
  padding: 0 5px;
  color: #fff;
@@ -104,8 +111,8 @@ header .blog a {
 
 .medium-text {
   font-family: "Input Sans Narrow Medium", Helvetica, sans-serif;
-  padding-top: 10%;
 }
+
 
 .desktop {
   display: none;
@@ -164,6 +171,16 @@ header .blog a {
   padding: 30px;
   color: #000;
   z-index: 30;
+}
+
+#content figure {
+  width: 50%;
+  text-align: left;
+  max-width: 300px;
+}
+
+#content img {
+  width: 100%;
 }
 
 #content h2 {

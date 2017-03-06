@@ -99,37 +99,42 @@
     // Add background gradient
     $('.gradient').css({ background: "-webkit-gradient(linear, left top, right top, from(" + colorLeft + "), to(" + colorRight + "))" })
                   .css({ background: "-moz-linear-gradient(left, " + colorLeft + " 0%, " + colorRight + " 100%)" });
-    // Readjust background for text
-    // $('.gradient-text').css({ webkitBackgroundClip: 'text' })
-    //                    .css({ webkitTextFillColor: 'transparent' });
+    $('#content a').hover(function() {
+      $(this).css({ background: "-webkit-gradient(linear, left top, right top, from(" + colorLeft + "), to(" + colorRight + "))" })
+             .css({ background: "-moz-linear-gradient(left, " + colorLeft + " 0%, " + colorRight + " 100%)" })
+             .css({ webkitBackgroundClip: 'text' })
+             .css({ webkitTextFillColor: 'transparent' });
+    }, function () {
+      $(this).css({ webkitBackgroundClip: '' })
+             .css({ webkitTextFillColor: '' })
+             .css({ background: ''});
+    });
 
-    //  $('.gradient-text a').hover(function() {
-    //    // var colors = updateGradient();
-     //
-    //    $(this).css({ background: "-webkit-gradient(linear, left top, right top, from(" + colorLeft + "), to(" + colorRight + "))" })
-    //           .css({ background: "-moz-linear-gradient(left, " + colorLeft + " 0%, " + colorRight + " 100%)" })
-    //           .css({ webkitTextFillColor: 'white' });
-    //  }, function () {
-    //    $(this).css({ webkitBackgroundClip: 'text' })
-    //           .css({ webkitTextFillColor: 'transparent' })
-    //           .css({ background: ''});
-    //  });
-    // $('body').css({ background: "radial-gradient(" + colorLeft + ", " + colorRight + ")" })
-    //          .css({ background: "-moz-radial-gradient(" + colorLeft + " 0%, " + colorRight + " 100%)" });
+    function sticky_relocate() {
+      var headerHeight = $('header').outerHeight();
+      var windowTop = $(window).scrollTop();
+      var contentTop = $('#content').offset().top - headerHeight;
+
+      if (windowTop > contentTop) {
+          $('header').css({background: 'white'});
+          $('header .blog a').css({ background: "-webkit-gradient(linear, left top, right top, from(" + colorLeft + "), to(" + colorRight + "))" })
+                             .css({ background: "-moz-linear-gradient(left, " + colorLeft + " 0%, " + colorRight + " 100%)" })
+                             .css({ webkitBackgroundClip: 'text' })
+                             .css({ webkitTextFillColor: 'transparent' });
+      } else {
+          $('header').css({ background: "-webkit-gradient(linear, left top, right top, from(" + colorLeft + "), to(" + colorRight + "))" })
+                     .css({ background: "-moz-linear-gradient(left, " + colorLeft + " 0%, " + colorRight + " 100%)" });
+          $('header .blog a').css({ background: "" })
+                             .css({ webkitBackgroundClip: '' })
+                             .css({ webkitTextFillColor: '' });
+      }
+    }
+
+    $(window).scroll(sticky_relocate);
+    sticky_relocate();
   }
 
-  $('#content a').hover(function() {
-    var colors = updateGradient();
 
-    $(this).css({ background: "-webkit-gradient(linear, left top, right top, from(" + colors[0] + "), to(" + colors[1] + "))" })
-           .css({ background: "-moz-linear-gradient(left, " + colors[0] + " 0%, " + colors[1] + " 100%)" })
-           .css({ webkitBackgroundClip: 'text' })
-           .css({ webkitTextFillColor: 'transparent' });
-  }, function () {
-    $(this).css({ webkitBackgroundClip: '' })
-           .css({ webkitTextFillColor: '' })
-           .css({ background: ''});
-  });
 
   setInterval(renderColors, 500);
 }();
