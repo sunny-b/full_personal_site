@@ -118,17 +118,18 @@
     //          .css({ background: "-moz-radial-gradient(" + colorLeft + " 0%, " + colorRight + " 100%)" });
   }
 
-  // $('.gradient-text a').hover(function() {
-  //   // var colors = updateGradient();
-  //
-  //   $(this).css({ background: "-webkit-gradient(linear, left top, right top, from(" + colors[0] + "), to(" + colors[1] + "))" })
-  //          .css({ background: "-moz-linear-gradient(left, " + colors[0] + " 0%, " + colors[1] + " 100%)" })
-  //          .css({ webkitTextFillColor: 'white' });
-  // }, function () {
-  //   $(this).css({ webkitBackgroundClip: 'text' })
-  //          .css({ webkitTextFillColor: 'transparent' })
-  //          .css({ background: ''});
-  // });
+  $('#content a').hover(function() {
+    var colors = updateGradient();
+
+    $(this).css({ background: "-webkit-gradient(linear, left top, right top, from(" + colors[0] + "), to(" + colors[1] + "))" })
+           .css({ background: "-moz-linear-gradient(left, " + colors[0] + " 0%, " + colors[1] + " 100%)" })
+           .css({ webkitBackgroundClip: 'text' })
+           .css({ webkitTextFillColor: 'transparent' });
+  }, function () {
+    $(this).css({ webkitBackgroundClip: '' })
+           .css({ webkitTextFillColor: '' })
+           .css({ background: ''});
+  });
 
   setInterval(renderColors, 500);
 }();
