@@ -11,6 +11,7 @@
     z-index: -3;
     position: relative;
     background-color: #000;
+    color: #fff;
   }
 
   #homepage {
@@ -28,19 +29,9 @@
 
   #homepage .info {
     margin: 20px;
-    background-color: #fff;
-    box-sizing: border-box;
     padding: 20px;
     position: relative;
     z-index: 20;
-  }
-
-  #homepage .info figure {
-    width: 300px;
-  }
-
-  #homepage .info img {
-    width: 100%;
   }
 
   #homepage .info h1 {
@@ -67,7 +58,7 @@
 
   .medium-text {
     font-family: "Input Sans Narrow Medium", Helvetica, sans-serif;
-    padding-top: 65px;
+    padding-top: 10%;
   }
 
   .desktop {
@@ -105,6 +96,14 @@
     background-size: 65px;
   }
 
+  /*******************
+    SlideShow
+  ******************/
+
+  .slideshow {
+    display: none;
+  }
+
 @media (min-width: 375px) {
   body {
     font-size: 20px;
@@ -121,15 +120,19 @@
   ******************/
 
   #homepage .info {
+    width: 49vw;
     max-width: 720px;
     height: 83vh;
     margin: 0 0 0 5%;
-
-    padding: 98px 63px 0;
+    padding: 50px 45px 0;
   }
 
   #homepage .info h1 {
-    padding-bottom: 40px;
+    padding-bottom: 10%;
+  }
+
+  #homepage .info figure {
+    display: none;
   }
 
   /*******************
@@ -150,6 +153,14 @@
   }
 
   .arrow .desktop {
+    display: block;
+  }
+
+  /*******************
+    SlideShow
+  ******************/
+
+  .slideshow {
     display: block;
   }
 }
