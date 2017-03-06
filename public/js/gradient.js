@@ -100,35 +100,35 @@
     $('.gradient').css({ background: "-webkit-gradient(linear, left top, right top, from(" + colorLeft + "), to(" + colorRight + "))" })
                   .css({ background: "-moz-linear-gradient(left, " + colorLeft + " 0%, " + colorRight + " 100%)" });
     // Readjust background for text
-    $('.gradient-text').css({ webkitBackgroundClip: 'text' })
-                       .css({ webkitTextFillColor: 'transparent' });
+    // $('.gradient-text').css({ webkitBackgroundClip: 'text' })
+    //                    .css({ webkitTextFillColor: 'transparent' });
 
-     $('.gradient-text a').hover(function() {
-       // var colors = updateGradient();
-
-       $(this).css({ background: "-webkit-gradient(linear, left top, right top, from(" + colorLeft + "), to(" + colorRight + "))" })
-              .css({ background: "-moz-linear-gradient(left, " + colorLeft + " 0%, " + colorRight + " 100%)" })
-              .css({ webkitTextFillColor: 'white' });
-     }, function () {
-       $(this).css({ webkitBackgroundClip: 'text' })
-              .css({ webkitTextFillColor: 'transparent' })
-              .css({ background: ''});
-     });
+    //  $('.gradient-text a').hover(function() {
+    //    // var colors = updateGradient();
+     //
+    //    $(this).css({ background: "-webkit-gradient(linear, left top, right top, from(" + colorLeft + "), to(" + colorRight + "))" })
+    //           .css({ background: "-moz-linear-gradient(left, " + colorLeft + " 0%, " + colorRight + " 100%)" })
+    //           .css({ webkitTextFillColor: 'white' });
+    //  }, function () {
+    //    $(this).css({ webkitBackgroundClip: 'text' })
+    //           .css({ webkitTextFillColor: 'transparent' })
+    //           .css({ background: ''});
+    //  });
     // $('body').css({ background: "radial-gradient(" + colorLeft + ", " + colorRight + ")" })
     //          .css({ background: "-moz-radial-gradient(" + colorLeft + " 0%, " + colorRight + " 100%)" });
   }
 
-  $('.gradient-text a').hover(function() {
-    // var colors = updateGradient();
-
-    $(this).css({ background: "-webkit-gradient(linear, left top, right top, from(" + colors[0] + "), to(" + colors[1] + "))" })
-           .css({ background: "-moz-linear-gradient(left, " + colors[0] + " 0%, " + colors[1] + " 100%)" })
-           .css({ webkitTextFillColor: 'white' });
-  }, function () {
-    $(this).css({ webkitBackgroundClip: 'text' })
-           .css({ webkitTextFillColor: 'transparent' })
-           .css({ background: ''});
-  });
+  // $('.gradient-text a').hover(function() {
+  //   // var colors = updateGradient();
+  //
+  //   $(this).css({ background: "-webkit-gradient(linear, left top, right top, from(" + colors[0] + "), to(" + colors[1] + "))" })
+  //          .css({ background: "-moz-linear-gradient(left, " + colors[0] + " 0%, " + colors[1] + " 100%)" })
+  //          .css({ webkitTextFillColor: 'white' });
+  // }, function () {
+  //   $(this).css({ webkitBackgroundClip: 'text' })
+  //          .css({ webkitTextFillColor: 'transparent' })
+  //          .css({ background: ''});
+  // });
 
   setInterval(renderColors, 500);
 }();

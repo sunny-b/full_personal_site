@@ -1,108 +1,151 @@
 @import "font.css";
 @import "reset.css";
 
-  /*******************
-    General
-  ******************/
-  body {
-    font: normal 16px/160% "Input Sans Narrow Light", Helvetica, sans-serif;
-    padding: 0;
-    margin: 0;
-    z-index: -3;
-    position: relative;
-    background-color: #000;
-    color: #fff;
-  }
+/*******************
+  General
+******************/
+body {
+  font: normal 16px/160% "Input Sans Narrow Light", Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  z-index: -3;
+  position: relative;
+  background-color: #000;
+  color: #fff;
+}
 
-  #homepage {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    padding: 0;
-    margin: 0;
-  }
+a {
+  color: #fff;
+  text-decoration: none;
+}
 
+/*******************
+  Header
+******************/
 
-  /*******************
-    Main info
-  ******************/
+header {
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px 20px 0 20px;
+  margin-bottom: 20px;
+}
 
-  #homepage .info {
-    margin: 20px;
-    padding: 20px;
-    position: relative;
-    z-index: 20;
-  }
+header .icon {
+  width: 30px;
+  height: 30px;
+  float: left;
+}
 
-  #homepage .info h1 {
-    font-size: 25px;
-    line-height: 150%;
-    font-weight: 100;
-    padding-bottom: 30px;
-  }
+header .icon a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url('/images/foggy-full-moon-night.svg') 0 0 no-repeat;
+  background-size: cover;
+  text-indent: -9999px;
+}
 
-  #homepage .info p {
-    color: #000;
-  }
-
-  .gradient-text a {
-   padding: 0 5px;
-   border-bottom: 1px solid #ccc;
-   text-decoration: none;
-   -webkit-background-clip: text !important;
-  }
-
-  .gradient-text a:hover {
-    -webkit-background-clip: border-box !important;
-  }
-
-  .medium-text {
-    font-family: "Input Sans Narrow Medium", Helvetica, sans-serif;
-    padding-top: 10%;
-  }
-
-  .desktop {
-    display: none;
-  }
+header .blog {
+  float: right;
+}
 
 
-  /*******************
-    Arrow
-  ******************/
+/*******************
+  Main info
+******************/
 
-  .arrow {
-    width: 28px;
-    height: 19px;
-    text-indent: -9999px;
-    margin-top: 40px;
-  }
 
-  .arrow .desktop, .arrow .mobile {
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
+#homepage {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
 
-  .arrow .mobile {
-    display: block;
-    background: url("../images/arrow_mobile.png");
-    background-repeat: no-repeat;
-  }
+#homepage .info {
+  padding: 20px;
+  position: relative;
+  z-index: 20;
+}
 
-  .arrow .desktop {
-    background: url("../images/arrow_down.png") -11px -8px;
-    background-repeat: no-repeat;
-    display: none;
-    background-size: 65px;
-  }
+#homepage .info h1 {
+  font-size: 25px;
+  line-height: 150%;
+  font-weight: 100;
+  padding-bottom: 30px;
+}
 
-  /*******************
-    SlideShow
-  ******************/
+.gradient-text a {
+ padding: 0 5px;
+ color: #fff;
+ border-bottom: 1px solid #ccc;
+ text-decoration: none;
+ -webkit-background-clip: text !important;
+}
 
-  .slideshow {
-    display: none;
-  }
+.gradient-text a:hover {
+  -webkit-background-clip: border-box !important;
+}
+
+.medium-text {
+  font-family: "Input Sans Narrow Medium", Helvetica, sans-serif;
+  padding-top: 10%;
+}
+
+.desktop {
+  display: none;
+}
+
+
+/*******************
+  Arrow
+******************/
+
+.arrow {
+  width: 40px;
+  height: 30px;
+  text-indent: -9999px;
+  margin-top: 40px;
+}
+
+.arrow .desktop, .arrow .mobile {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.arrow .mobile {
+  display: block;
+  background: url("../images/down-arrow.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.arrow .desktop {
+  background: url("../images/arrow_down.png") -11px -8px;
+  background-repeat: no-repeat;
+  display: none;
+  background-size: 65px;
+}
+
+/*******************
+  SlideShow
+******************/
+
+.slideshow {
+  display: none;
+}
+
+/*******************
+  Footer
+******************/
+
+footer {
+  font-size: 10px;
+}
+
 
 @media (min-width: 375px) {
   body {
@@ -119,12 +162,17 @@
     Main
   ******************/
 
+  header {
+    padding-left: 115px;
+    padding-right: 115px;
+  }
+
   #homepage .info {
     width: 49vw;
     max-width: 720px;
     height: 83vh;
-    margin: 0 0 0 5%;
-    padding: 50px 45px 0;
+    margin: 0 0 0 115px;
+    padding: 50px 0 0;
   }
 
   #homepage .info h1 {
