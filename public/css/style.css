@@ -119,7 +119,7 @@ header .blog a {
   transition: 0.5s ease;
 }
 
-#homepage .info span:hover {
+#homepage .info span + span:hover {
   background-color: white;
 }
 
@@ -131,15 +131,9 @@ header .blog a {
   cursor: text;
 }
 
-
 #content:target ~ main {
     -webkit-transform: translateY( -100vh );
     transform: translateY( -100vh );
-}
-
-.gradient-text {
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
 }
 
 .medium-text {
@@ -301,13 +295,14 @@ footer {
     padding-bottom: 10%;
   }
 
-  #homepage .info figure {
-    display: none;
+  #homepage .info span:hover {
+    background-color: #fff;
   }
 
   .wait-cursor {
     cursor: wait;
   }
+
 
   /*******************
     SlideShow
@@ -383,5 +378,11 @@ footer {
     content: "\27F6";
     display: inline-block;
     margin-left: 10px;
+  }
+}
+
+@media (max-width: 670px) {
+  span:first-child .hover-effect:hover {
+    -webkit-text-fill-color: white !important;
   }
 }
