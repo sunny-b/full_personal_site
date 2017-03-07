@@ -38,15 +38,20 @@ header {
   overflow: hidden;
   width: 100%;
   box-sizing: border-box;
-  padding: 20px;
+  padding: 20px 20px 20px 28px;
   margin-bottom: 20px;
   position: fixed;
   z-index: 100;
 }
 
+header.white {
+  background: #fff;
+}
+
 header .icon {
   float: left;
   display: none;
+  margin-top: 6px;
 }
 
 header .icon.show {
@@ -103,26 +108,22 @@ header .blog a {
   margin-bottom: 40px;
 }
 
-.gradient-text a {
+#homepage .info p a {
  padding: 0 5px;
  color: #fff;
  border-bottom: 1px solid #ccc;
  text-decoration: none;
- -webkit-background-clip: text !important;
 }
 
-.gradient-text a:hover {
-  -webkit-background-clip: border-box !important;
+.gradient-text {
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
 }
 
 .medium-text {
   font-family: "Input Sans Narrow Medium", Helvetica, sans-serif;
 }
 
-
-.desktop {
-  display: none;
-}
 
 
 /*******************
@@ -135,24 +136,29 @@ header .blog a {
   text-indent: -9999px;
 }
 
-.arrow .desktop, .arrow .mobile {
+.arrow .white-arrow,
+.arrow .black-arrow {
   width: 100%;
   height: 100%;
   border: none;
 }
 
-.arrow .mobile {
+.arrow .white-arrow {
   display: block;
   background: url("../images/down-arrow.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.arrow .desktop {
-  background: url("../images/arrow_down.png") -11px -8px;
+.arrow .black-arrow {
+  display: block;
+  background: url("../images/down-arrow-black.svg");
   background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.desktop {
   display: none;
-  background-size: 65px;
 }
 
 /*******************
@@ -179,9 +185,9 @@ header .blog a {
 }
 
 #content figure {
-  width: 50%;
+  width: 80%;
   text-align: left;
-  max-width: 300px;
+  max-width: 400px;
 }
 
 #content img {
@@ -240,16 +246,16 @@ footer {
     Main
   ******************/
 
-  header {
-    padding-left: 115px;
-    padding-right: 115px;
+  header, #content {
+    padding-left: 10vw;
+    padding-right: 10vw;
   }
 
   #homepage .info {
     width: 49vw;
     max-width: 720px;
     height: 83vh;
-    margin: 0 0 0 115px;
+    margin: 0 0 0 10vw;
     padding: 50px 0 0;
   }
 
@@ -262,23 +268,10 @@ footer {
   }
 
   /*******************
-    Arrow
+    SlideShow
   ******************/
 
-  .arrow {
-    width: 45px;
-    height: 45px;
-    margin: 0;
-    position: absolute;
-    left: 64px;
-    bottom: -14px;
-  }
-
-  .arrow .mobile {
-    display: none;
-  }
-
-  .arrow .desktop {
+  .slideshow {
     display: block;
   }
 
@@ -286,7 +279,13 @@ footer {
     SlideShow
   ******************/
 
-  .slideshow {
-    display: block;
+  #content figure {
+    float: right;
+    width: 45%;
+    margin-left: 20px;
+  }
+
+  #content p {
+    max-width: 460px;
   }
 }

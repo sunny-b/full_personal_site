@@ -57,7 +57,7 @@
       return Math.round(counterStep * initial[num] + step * target[num]);
     }
     function buildRGBString(red, green, blue) {
-      return "rgba(" + red + "," + green + "," + blue + ", .7)";
+      return "rgba(" + red + "," + green + "," + blue + ", .9)";
     }
 
     if ($===undefined) return;
@@ -110,30 +110,29 @@
              .css({ background: ''});
     });
 
-    function sticky_relocate() {
+    function overlayHeader() {
       var headerHeight = $('header').outerHeight();
       var windowTop = $(window).scrollTop();
       var contentTop = $('#content').offset().top - headerHeight;
 
       if (windowTop > contentTop) {
-          $('header').css({background: 'white'});
+          $('header').addClass('white');
           $('header .blog a').css({ background: "-webkit-gradient(linear, left top, right top, from(" + colorLeft + "), to(" + colorRight + "))" })
                              .css({ background: "-moz-linear-gradient(left, " + colorLeft + " 0%, " + colorRight + " 100%)" })
                              .css({ webkitBackgroundClip: 'text' })
                              .css({ webkitTextFillColor: 'transparent' });
           $('header .icon').addClass('show');
       } else {
-          $('header').css({ background: "-webkit-gradient(linear, left top, right top, from(" + colorLeft + "), to(" + colorRight + "))" })
-                     .css({ background: "-moz-linear-gradient(left, " + colorLeft + " 0%, " + colorRight + " 100%)" });
-          $('header .blog a').css({ background: "" })
+          $('header').removeClass('white')
+          $('header .blog a').css({ background: '' })
                              .css({ webkitBackgroundClip: '' })
                              .css({ webkitTextFillColor: '' });
           $('header .icon').removeClass('show');
       }
     }
 
-    $(window).scroll(sticky_relocate);
-    sticky_relocate();
+    $(window).scroll(overlayHeader);
+    overlayHeader();
   }
 
 

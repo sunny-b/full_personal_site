@@ -2,7 +2,7 @@
   position: absolute;
   width: 50vw;
   height: 29vw;
-  left: 50%;
+  right: 10vw;
   top: 290px;
   transform: translateY(-50%);
   z-index: 0;
@@ -117,7 +117,7 @@ ul.full-stack.active li:nth-child(10) span {
 @-webkit-keyframes imageAnimation {
   0% { opacity: 0;
   -webkit-animation-timing-function: ease-in; }
-  3% { opacity: 1;
+  1% { opacity: 1;
        -webkit-animation-timing-function: ease-out; }
   17% { opacity: 1 }
   25% { opacity: 0 }
@@ -126,7 +126,7 @@ ul.full-stack.active li:nth-child(10) span {
 @-moz-keyframes imageAnimation {
   0% { opacity: 0;
   -moz-animation-timing-function: ease-in; }
-  3% { opacity: 1;
+  1% { opacity: 1;
        -moz-animation-timing-function: ease-out; }
   17% { opacity: 1 }
   25% { opacity: 0 }
@@ -135,7 +135,7 @@ ul.full-stack.active li:nth-child(10) span {
 @-o-keyframes imageAnimation {
   0% { opacity: 0;
   -o-animation-timing-function: ease-in; }
-  3% { opacity: 1;
+  1% { opacity: 1;
        -o-animation-timing-function: ease-out; }
   17% { opacity: 1 }
   25% { opacity: 0 }
@@ -144,7 +144,7 @@ ul.full-stack.active li:nth-child(10) span {
 @-ms-keyframes imageAnimation {
   0% { opacity: 0;
   -ms-animation-timing-function: ease-in; }
-  3% { opacity: 1;
+  1% { opacity: 1;
        -ms-animation-timing-function: ease-out; }
   17% { opacity: 1 }
   25% { opacity: 0 }
@@ -153,7 +153,7 @@ ul.full-stack.active li:nth-child(10) span {
 @keyframes imageAnimation {
   0% { opacity: 0;
   animation-timing-function: ease-in; }
-  3% { opacity: 1;
+  1% { opacity: 1;
        animation-timing-function: ease-out; }
   17% { opacity: 1 }
   25% { opacity: 0 }
