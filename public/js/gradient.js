@@ -123,7 +123,7 @@
                              .css({ webkitTextFillColor: 'transparent' });
           $('header .icon').addClass('show');
       } else {
-          $('header').removeClass('white')
+          $('header').removeClass('white');
           $('header .blog a').css({ background: '' })
                              .css({ webkitBackgroundClip: '' })
                              .css({ webkitTextFillColor: '' });

@@ -42,6 +42,7 @@ header {
   margin-bottom: 20px;
   position: fixed;
   z-index: 100;
+  transition: background-color 0.5s ease;
 }
 
 header.white {
@@ -116,8 +117,8 @@ header .blog a {
 }
 
 #content:target ~ main {
-    -webkit-transform: translateY( -100% );
-    transform: translateY( -100% );
+    -webkit-transform: translateY( -100vh );
+    transform: translateY( -100vh );
 }
 
 .gradient-text {
