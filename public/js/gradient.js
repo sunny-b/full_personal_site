@@ -99,7 +99,7 @@
     // Add background gradient
     $('.gradient').css({ background: "-webkit-gradient(linear, left top, right top, from(" + colorLeft + "), to(" + colorRight + "))" })
                   .css({ background: "-moz-linear-gradient(left, " + colorLeft + " 0%, " + colorRight + " 100%)" });
-    $('#content a').hover(function() {
+    $('main a').hover(function() {
       $(this).css({ background: "-webkit-gradient(linear, left top, right top, from(" + colorLeft + "), to(" + colorRight + "))" })
              .css({ background: "-moz-linear-gradient(left, " + colorLeft + " 0%, " + colorRight + " 100%)" })
              .css({ webkitBackgroundClip: 'text' })
@@ -113,7 +113,7 @@
     function overlayHeader() {
       var headerHeight = $('header').outerHeight();
       var windowTop = $(window).scrollTop();
-      var contentTop = $('#content').offset().top - headerHeight;
+      var contentTop = $('main').offset().top - headerHeight;
 
       if (windowTop > contentTop) {
           $('header').addClass('white');
