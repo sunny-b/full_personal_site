@@ -196,9 +196,12 @@ main {
 }
 
 main figure {
-  width: 80%;
   text-align: left;
   max-width: 400px;
+}
+
+main aside {
+  margin-bottom: 10px;
 }
 
 main img {
@@ -221,6 +224,10 @@ main a,
 main li {
   color: #000;
   font-size: 16px;
+}
+
+main li, main h3 {
+  margin-bottom: 15px;
 }
 
 main ul {
@@ -286,19 +293,48 @@ footer {
     display: block;
   }
 
+  .desktop {
+    display: block;
+  }
+
   /*******************
-    SlideShow
+    Main Overlay
   ******************/
 
   main h2, main h3 {
     margin-bottom: 20px;
   }
 
-  main figure {
-    float: right;
+  main section {
+    overflow: auto;
+    position: relative;
+    padding-bottom: 40px;
+  }
+
+  main article {
+    width: 55%;
+    float: left;
+  }
+
+  main aside {
     width: 45%;
+    float: right;
+    height: 100%;
+    position: absolute;
+    right: 0;
+  }
+
+  main figure {
     margin-left: 20px;
     font-size: 20px;
+    float: right;
+    max-width: 420px;
+  }
+
+  main figure + figure {
+    position: absolute;
+    bottom: 0;
+    right: 0;
   }
 
   main p {
@@ -310,5 +346,11 @@ footer {
 
   main ul li {
     margin-bottom: 10px;
+  }
+
+  .indicator:after {
+    content: "\27F6";
+    display: inline-block;
+    margin-left: 10px;
   }
 }
