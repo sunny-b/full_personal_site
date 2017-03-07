@@ -121,12 +121,14 @@
                              .css({ background: "-moz-linear-gradient(left, " + colorLeft + " 0%, " + colorRight + " 100%)" })
                              .css({ webkitBackgroundClip: 'text' })
                              .css({ webkitTextFillColor: 'transparent' });
+          $('header .icon').addClass('show');
       } else {
           $('header').css({ background: "-webkit-gradient(linear, left top, right top, from(" + colorLeft + "), to(" + colorRight + "))" })
                      .css({ background: "-moz-linear-gradient(left, " + colorLeft + " 0%, " + colorRight + " 100%)" });
           $('header .blog a').css({ background: "" })
                              .css({ webkitBackgroundClip: '' })
                              .css({ webkitTextFillColor: '' });
+          $('header .icon').removeClass('show');
       }
     }
 
