@@ -16,10 +16,7 @@
   display: block;
   position: absolute;
 }
-.slideshow:after {
-  content: '';
-  background: transparent url(../images/pattern.png) repeat top left;
-}
+
 .slideshow span {
   color: transparent;
   background-size: cover;

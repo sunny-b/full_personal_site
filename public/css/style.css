@@ -109,15 +109,28 @@ header .blog a {
   margin-bottom: 40px;
 }
 
-#homepage .info a {
+#homepage .info p a {
  padding: 0 5px;
  color: #fff;
  text-decoration: none;
 }
 
-#homepage .info a + a {
+#homepage .info span {
+  transition: 0.5s ease;
+}
+
+#homepage .info span:hover {
+  background-color: white;
+}
+
+#homepage .info p span + span a {
   border-bottom: 1px solid #ccc;
 }
+
+.wait-cursor {
+  cursor: text;
+}
+
 
 #content:target ~ main {
     -webkit-transform: translateY( -100vh );
@@ -280,7 +293,7 @@ footer {
     padding: 50px 0 0;
   }
 
-  #homepage .info a {
+  #homepage .info p a {
     border-bottom: 1px solid #ccc;
   }
 
@@ -290,6 +303,10 @@ footer {
 
   #homepage .info figure {
     display: none;
+  }
+
+  .wait-cursor {
+    cursor: wait;
   }
 
   /*******************
@@ -313,9 +330,16 @@ footer {
   }
 
   main section {
-    overflow: auto;
     position: relative;
     padding-bottom: 40px;
+  }
+
+  .clearfix:after {
+    content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
   }
 
   main article {
