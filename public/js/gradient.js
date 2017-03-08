@@ -16,6 +16,7 @@ $(document).ready(function() {
     colorIndices.push(randIdx());
   }
 
+  // Calculate gradient colors
   function updateGradient() {
     function assignInitTargColors() {
       initialColor1L = colors[colorIndices[0]];
@@ -24,15 +25,15 @@ $(document).ready(function() {
       targetColor2L = colors[colorIndices[3]];
     }
     function currentColorLeft() {
-      redLeft = calcColor(initialColor1L, targetColor1L, 0);
-      greenLeft = calcColor(initialColor1L, targetColor1L, 1);
-      blueLeft = calcColor(initialColor1L, targetColor1L, 2);
+      redLeft = calcColor(initialColor1L, targetColor1L, 0, step, counterStep);
+      greenLeft = calcColor(initialColor1L, targetColor1L, 1, step, counterStep);
+      blueLeft = calcColor(initialColor1L, targetColor1L, 2, step, counterStep);
       colorLeft = buildRGBString(redLeft, greenLeft, blueLeft);
     }
     function currentColorRight() {
-      redRight = calcColor(initialColor2L, targetColor2L, 0);
-      greenRight = calcColor(initialColor2L, targetColor2L, 1);
-      blueRight = calcColor(initialColor2L, targetColor2L, 2);
+      redRight = calcColor(initialColor2L, targetColor2L, 0, step, counterStep);
+      greenRight = calcColor(initialColor2L, targetColor2L, 1, step, counterStep);
+      blueRight = calcColor(initialColor2L, targetColor2L, 2, step, counterStep);
       colorRight = buildRGBString(redRight, greenRight, blueRight);
     }
     function calcCurrentColors() {
@@ -47,19 +48,8 @@ $(document).ready(function() {
       colorIndices[1] = randomIndex(colorIndices[1]);
       colorIndices[3] = randomIndex(colorIndices[3]);
     }
-    function randomNum(prevIndex) {
-      return prevIndex + Math.floor(1 + Math.random() * (colors.length - 1));
-    }
-    function randomIndex(prevIndex) {
-      return randomNum(prevIndex) % colors.length;
-    }
-    function calcColor(initial, target, num) {
-      return Math.round(counterStep * initial[num] + step * target[num]);
-    }
-    function buildRGBString(red, green, blue) {
-      return "rgba(" + red + "," + green + "," + blue + ", 1)";
-    }
 
+    // UpdateGradient Logic
     if ($===undefined) return;
 
     var counterStep = 1 - step;
@@ -90,6 +80,22 @@ $(document).ready(function() {
     return [colorLeft, colorRight];
   }
 
+  function randomNum(prevIndex) {
+    return prevIndex + Math.floor(1 + Math.random() * (colors.length - 1));
+  }
+
+  function randomIndex(prevIndex) {
+    return randomNum(prevIndex) % colors.length;
+  }
+
+  function calcColor(initial, target, num, step, counterStep) {
+    return Math.round(counterStep * initial[num] + step * target[num]);
+  }
+
+  function buildRGBString(red, green, blue) {
+    return "rgba(" + red + "," + green + "," + blue + ", 1)";
+  }
+
   function renderColors() {
     var colors = updateGradient();
     var colorLeft = colors[0];
@@ -112,6 +118,7 @@ $(document).ready(function() {
              .css({ background: ''});
     });
 
+    // Overlay transition and text gradient
     function overlayHeader() {
       var headerHeight = $('header').outerHeight();
       var windowTop = $(window).scrollTop();
@@ -135,12 +142,6 @@ $(document).ready(function() {
                              .css({ webkitTextFillColor: '' });
           $('header .icon').removeClass('show');
       }
-      //
-      // if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
-	    //   $('main').css('position', 'fixed');
-	    // } else {
-      //   $('main').css('position', 'relative')
-      // }
     }
 
     $(window).scroll(overlayHeader);

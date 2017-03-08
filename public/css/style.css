@@ -26,6 +26,18 @@ body {
   transform: scaleY(-1);
 }
 
+.desktop {
+  display: none;
+}
+
+.wait-cursor {
+  cursor: text;
+}
+
+.medium-text {
+  font-family: "Input Sans Narrow Medium", Helvetica, sans-serif;
+}
+
 a {
   text-decoration: none;
 }
@@ -127,28 +139,6 @@ header .blog a {
   border-bottom: 1px solid #ccc;
 }
 
-.wait-cursor {
-  cursor: text;
-}
-
-/*body #content:target {
-  max-height: 1299px;
-}*/
-
-/*#content:target ~ main {
-  -o-transform: translateY( -100vh );
-  -ms-transform: translateY( -100vh );
-  -moz-transform: translateY( -100vh );
-  -webkit-transform: translateY( -100vh );
-  transform: translateY( -100vh );
-  height: auto;
-}*/
-
-.medium-text {
-  font-family: "Input Sans Narrow Medium", Helvetica, sans-serif;
-}
-
-
 
 /*******************
   Arrow
@@ -179,10 +169,6 @@ header .blog a {
   background: url("../images/down-arrow-black.svg");
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.desktop {
-  display: none;
 }
 
 /*******************
@@ -266,6 +252,10 @@ footer {
 }
 
 
+/*******************
+  Media Queries
+******************/
+
 @media (min-width: 375px) {
   body {
     font-size: 20px;
@@ -277,6 +267,28 @@ footer {
 }
 
 @media (min-width: 671px) {
+  /*******************
+    General
+  ******************/
+
+  .wait-cursor {
+    cursor: wait;
+  }
+
+  .indicator:after {
+    content: "\27F6";
+    display: inline-block;
+    margin-left: 10px;
+  }
+
+  .clearfix:after {
+    content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+  }
+
   /*******************
     Main
   ******************/
@@ -306,11 +318,6 @@ footer {
     background-color: #fff;
   }
 
-  .wait-cursor {
-    cursor: wait;
-  }
-
-
   /*******************
     SlideShow
   ******************/
@@ -334,14 +341,6 @@ footer {
   main section {
     position: relative;
     padding-bottom: 40px;
-  }
-
-  .clearfix:after {
-    content: " "; /* Older browser do not support empty content */
-   visibility: hidden;
-   display: block;
-   height: 0;
-   clear: both;
   }
 
   main article {
@@ -379,12 +378,6 @@ footer {
 
   main ul li {
     margin-bottom: 10px;
-  }
-
-  .indicator:after {
-    content: "\27F6";
-    display: inline-block;
-    margin-left: 10px;
   }
 }
 
