@@ -1,9 +1,11 @@
-!function() {
-  $('.white-arrow').click(function() {
-    $('header').addClass('white');
+(function() {
+  $('.white-arrow').on('click', function(e){
+    e.preventDefault();
+    $('html,body').animate({scrollTop: $('#content').offset().top}, 400);
   });
 
-  $('.black-arrow').click(function() {
-    $('header').removeClass('white');
+  $('.black-arrow').on('click', function(e){
+    e.preventDefault();
+    $('html,body').animate({scrollTop: 0}, 400);
   });
-}();
+})();

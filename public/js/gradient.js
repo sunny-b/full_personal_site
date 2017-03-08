@@ -1,4 +1,4 @@
-!function () {
+$(document).ready(function() {
   function randIdx() {
     return Math.floor(Math.random() * (colors.length - 1));
   }
@@ -57,7 +57,7 @@
       return Math.round(counterStep * initial[num] + step * target[num]);
     }
     function buildRGBString(red, green, blue) {
-      return "rgba(" + red + "," + green + "," + blue + ", .9)";
+      return "rgba(" + red + "," + green + "," + blue + ", 1)";
     }
 
     if ($===undefined) return;
@@ -103,16 +103,20 @@
       $(this).css({ background: "-webkit-gradient(linear, left top, right top, from(" + colorLeft + "), to(" + colorRight + "))" })
              .css({ background: "-moz-linear-gradient(left, " + colorLeft + " 0%, " + colorRight + " 100%)" })
              .css({ webkitBackgroundClip: 'text' })
+             .css({ mozBackgroundClip: 'text'})
              .css({ webkitTextFillColor: 'transparent' });
     }, function () {
       $(this).css({ webkitBackgroundClip: '' })
              .css({ webkitTextFillColor: '' })
+             .css({ mozBackgroundClip: ''})
              .css({ background: ''});
     });
 
     function overlayHeader() {
       var headerHeight = $('header').outerHeight();
       var windowTop = $(window).scrollTop();
+      var scrollHeight = $(document).height();
+	    var scrollPosition = $(window).height() + $(window).scrollTop();
       var contentTop = $('main').offset().top - headerHeight;
 
       if (windowTop > contentTop) {
@@ -120,15 +124,23 @@
           $('header .blog a').css({ background: "-webkit-gradient(linear, left top, right top, from(" + colorLeft + "), to(" + colorRight + "))" })
                              .css({ background: "-moz-linear-gradient(left, " + colorLeft + " 0%, " + colorRight + " 100%)" })
                              .css({ webkitBackgroundClip: 'text' })
+                             .css({ mozBackgroundClip: 'text'})
                              .css({ webkitTextFillColor: 'transparent' });
           $('header .icon').addClass('show');
       } else {
           $('header').removeClass('white');
           $('header .blog a').css({ background: '' })
                              .css({ webkitBackgroundClip: '' })
+                             .css({ mozBackgroundClip: ''})
                              .css({ webkitTextFillColor: '' });
           $('header .icon').removeClass('show');
       }
+      //
+      // if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
+	    //   $('main').css('position', 'fixed');
+	    // } else {
+      //   $('main').css('position', 'relative')
+      // }
     }
 
     $(window).scroll(overlayHeader);
@@ -136,6 +148,6 @@
   }
 
 
-
+  renderColors();
   setInterval(renderColors, 500);
-}();
+});

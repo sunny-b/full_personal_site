@@ -85,7 +85,7 @@ header .blog a {
 
 #homepage {
   width: 100%;
-  height: 100vh;
+  /*height: 100vh;*/
   position: relative;
   padding: 0;
   margin: 0;
@@ -131,10 +131,18 @@ header .blog a {
   cursor: text;
 }
 
-#content:target ~ main {
-    -webkit-transform: translateY( -100vh );
-    transform: translateY( -100vh );
-}
+/*body #content:target {
+  max-height: 1299px;
+}*/
+
+/*#content:target ~ main {
+  -o-transform: translateY( -100vh );
+  -ms-transform: translateY( -100vh );
+  -moz-transform: translateY( -100vh );
+  -webkit-transform: translateY( -100vh );
+  transform: translateY( -100vh );
+  height: auto;
+}*/
 
 .medium-text {
   font-family: "Input Sans Narrow Medium", Helvetica, sans-serif;
@@ -191,7 +199,7 @@ header .blog a {
 
 
 main {
-  position: relative;
+  position: absolute;
   top: 100vh;
   background-color: #fff;
   width: 100vw;
@@ -199,10 +207,9 @@ main {
   padding: 72px 30px 30px;
   color: #000;
   z-index: 30;
-  -webkit-transform: translateZ( 0 );
-  transform: translateZ( 0 );
   -webkit-transition: -webkit-transform 0.6s ease-in-out;
   transition: transform 0.6s ease-in-out;
+  overflow: hidden;
 }
 
 main figure {
@@ -282,7 +289,7 @@ footer {
   #homepage .info {
     width: 49vw;
     max-width: 720px;
-    height: 83vh;
+    /*height: 83vh;*/
     margin: 0 0 0 10vw;
     padding: 50px 0 0;
   }
