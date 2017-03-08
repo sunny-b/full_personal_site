@@ -409,6 +409,10 @@ footer {
     font-size: 1.8em;
   }
 
+  .slideshow {
+    top: 50vw;
+  }
+
   .arrow .white-arrow, .arrow {
     width: 100px;
     height: 80px;
