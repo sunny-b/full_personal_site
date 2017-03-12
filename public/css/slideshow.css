@@ -1,0 +1,163 @@
+.slideshow {
+  position: absolute;
+  width: 50vw;
+  height: 29vw;
+  right: 10vw;
+  top: 290px;
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+.slideshow ul,
+.slideshow ul li,
+.slideshow ul li span  {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+}
+
+.slideshow span {
+  color: transparent;
+  background-size: cover;
+  background-repeat: none;
+  opacity: 0;
+}
+
+
+ul.full-stack.active span {
+  -webkit-backface-visibility: hidden;
+  -webkit-animation: imageAnimation 32s linear infinite 0s forwards;
+  -moz-animation: imageAnimation 32s linear infinite 0s forwards;
+  -o-animation: imageAnimation 32s linear infinite 0s forwards;
+  -ms-animation: imageAnimation 32s linear infinite 0s forwards;
+  animation: imageAnimation 32s linear infinite 0s forwards;
+}
+
+ul.full-stack.active li:nth-child(1) span {
+  background-image: url(../images/main_exhibit_edited.png);
+}
+ul.full-stack.active li:nth-child(2) span {
+  background-image: url(../images/main_theo.png);
+  -webkit-animation-delay: 4s;
+  -moz-animation-delay: 4s;
+  -o-animation-delay: 4s;
+  -ms-animation-delay: 4s;
+  animation-delay: 4s;
+}
+ul.full-stack.active li:nth-child(3) span {
+  background-image: url(../images/main_dotufo_edited.png);
+  -webkit-animation-delay: 7s;
+  -moz-animation-delay: 7s;
+  -o-animation-delay: 7s;
+  -ms-animation-delay: 7s;
+  animation-delay: 7s;
+}
+ul.full-stack.active li:nth-child(4) span {
+  background-image: url(../images/main_shake_edited.png);
+  -webkit-animation-delay: 10s;
+  -moz-animation-delay: 10s;
+  -o-animation-delay: 10s;
+  -ms-animation-delay: 10s;
+  animation-delay: 10s;
+}
+ul.full-stack.active li:nth-child(5) span {
+  background-image: url(../images/main_zaha_edited.png);
+  -webkit-animation-delay: 13s;
+  -moz-animation-delay: 13s;
+  -o-animation-delay: 13s;
+  -ms-animation-delay: 13s;
+  animation-delay: 13s;
+}
+ul.full-stack.active li:nth-child(6) span {
+  background-image: url(../images/main_finger_edited.png);
+  -webkit-animation-delay: 16s;
+  -moz-animation-delay: 16s;
+  -o-animation-delay: 16s;
+  -ms-animation-delay: 16s;
+  animation-delay: 16s;
+}
+ul.full-stack.active li:nth-child(7) span {
+  background-image: url(../images/gallery_edited.png);
+  -webkit-animation-delay: 19s;
+  -moz-animation-delay: 19s;
+  -o-animation-delay: 19s;
+  -ms-animation-delay: 19s;
+  animation-delay: 19s;
+}
+ul.full-stack.active li:nth-child(8) span {
+  background-image: url(../images/ropetype_edited.png);
+  -webkit-animation-delay: 22s;
+  -moz-animation-delay: 22s;
+  -o-animation-delay: 22s;
+  -ms-animation-delay: 22s;
+  animation-delay: 22s;
+}
+ul.full-stack.active li:nth-child(9) span {
+  background-image: url(../images/last_ropetype_edited.png);
+  -webkit-animation-delay: 25s;
+  -moz-animation-delay: 25s;
+  -o-animation-delay: 25s;
+  -ms-animation-delay: 25s;
+  animation-delay: 25s;
+}
+
+ul.full-stack.active li:nth-child(10) span {
+  background-image: url(../images/whackaruby.gif);
+  -webkit-animation-delay: 28s;
+  -moz-animation-delay: 28s;
+  -o-animation-delay: 28s;
+  -ms-animation-delay: 28s;
+  animation-delay: 28s;
+}
+/* Animation for the slideshow images */
+@-webkit-keyframes imageAnimation {
+  0% { opacity: 0;
+  -webkit-animation-timing-function: ease-in; }
+  1% { opacity: 1;
+       -webkit-animation-timing-function: ease-out; }
+  17% { opacity: 1 }
+  25% { opacity: 0 }
+  100% { opacity: 0 }
+}
+@-moz-keyframes imageAnimation {
+  0% { opacity: 0;
+  -moz-animation-timing-function: ease-in; }
+  1% { opacity: 1;
+       -moz-animation-timing-function: ease-out; }
+  17% { opacity: 1 }
+  25% { opacity: 0 }
+  100% { opacity: 0 }
+}
+@-o-keyframes imageAnimation {
+  0% { opacity: 0;
+  -o-animation-timing-function: ease-in; }
+  1% { opacity: 1;
+       -o-animation-timing-function: ease-out; }
+  17% { opacity: 1 }
+  25% { opacity: 0 }
+  100% { opacity: 0 }
+}
+@-ms-keyframes imageAnimation {
+  0% { opacity: 0;
+  -ms-animation-timing-function: ease-in; }
+  1% { opacity: 1;
+       -ms-animation-timing-function: ease-out; }
+  17% { opacity: 1 }
+  25% { opacity: 0 }
+  100% { opacity: 0 }
+}
+@keyframes imageAnimation {
+  0% { opacity: 0;
+  animation-timing-function: ease-in; }
+  1% { opacity: 1;
+       animation-timing-function: ease-out; }
+  17% { opacity: 1 }
+  25% { opacity: 0 }
+  100% { opacity: 0 }
+}
+
+/* Show at least something when animations not supported */
+.no-cssanimations .slideshow li span{
+	opacity: 1;
+}

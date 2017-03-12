@@ -1,177 +1,440 @@
 @import "font.css";
 @import "reset.css";
 
-@media (max-width: 420px) {
-  /*******************
-    General
-  ******************/
-  body {
-    font: normal 20px/160% "Input Sans Narrow Light", Helvetica, sans-serif;
-    background: #000;
-    width: 100%;
-    padding: 0px;
-    margin: 0px;
-  }
-
-
-  /*******************
-    Main
-  ******************/
-
-  #homepage main {
-    margin: 20px;
-    background-color: #fff;
-    box-sizing: border-box;
-    padding: 20px;
-    position: relative;
-  }
-
-  #homepage main h1 {
-    font-size: 36px;
-    line-height: 150%;
-    font-weight: 100;
-    padding-bottom: 40px;
-  }
-
-  #homepage main p {
-    color: #000;
-  }
-
-  .gradient-text a {
-   border-bottom: 1px solid #ccc;
-   text-decoration: none;
-   -webkit-background-clip: text !important;
-  }
-
-  .gradient-text a:hover {
-    -webkit-background-clip: border-box !important;
-  }
-
-  .medium-text {
-    font-family: "Input Sans Narrow Medium", Helvetica, sans-serif;
-    padding-top: 65px;
-  }
-
-  .desktop {
-    display: none;
-  }
-
-
-  /*******************
-    Arrow
-  ******************/
-
-  .arrow {
-    width: 45px;
-    height: 45px;
-    text-indent: -9999px;
-    position: absolute;
-    left: 64px;
-    bottom: -14px;
-    background: transparent;
-  }
-
-  .arrow a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: url("../images/arrow_down.png") -11px -8px;
-    border: none;
-    background-size: 65px;
-  }
-
-  /*******************
-    Homepage Background Images
-  ******************/
-
-  #homepage .background-slideshow {
-    display: none;
-  }
-
-}
-
 /*******************
   General
 ******************/
-/*body {
-  font: normal 20px/160% "Input Sans Narrow Light", Helvetica, sans-serif;
-  background: #000;
-  width: 100%;
-  padding: 0px;
-  margin: 0px;
-}*/
 
-
-/*******************
-  Main
-******************/
-
-/*#homepage main {
-  width: 100%;
-  max-width: 60vw;
-  min-width: 570px;
-  height: 83vh;
-  margin-left: 65px;
-  background-color: #fff;
-  box-sizing: border-box;
-  padding: 98px 63px 0;
+body {
+  font: normal 16px/160% "Input Sans Narrow Light", Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  z-index: -3;
   position: relative;
+  color: #fff;
+  height: 100vh;
 }
 
-#homepage main h1 {
-  font-size: 36px;
-  line-height: 150%;
-  font-weight: 100;
-  padding-bottom: 40px;
+.fixed {
+  position: fixed;
+  top: 72px;
+  left: 0;
+  width: 100%;
 }
 
-#homepage main p {
-  color: #000;
+.upside-down {
+  transform: scaleY(-1);
 }
 
-.gradient-text a {
- border-bottom: 1px solid #ccc;
- text-decoration: none;
- -webkit-background-clip: text !important;
+.desktop {
+  display: none;
 }
 
-.gradient-text a:hover {
-  -webkit-background-clip: border-box !important;
+.wait-cursor {
+  cursor: text;
 }
 
 .medium-text {
   font-family: "Input Sans Narrow Medium", Helvetica, sans-serif;
-  padding-top: 65px;
-}*/
+}
+
+a {
+  text-decoration: none;
+}
+
+/*******************
+  Header
+******************/
+
+header {
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px 20px 20px 28px;
+  margin-bottom: 20px;
+  position: fixed;
+  z-index: 100;
+  transition: background-color 0.5s ease;
+}
+
+header.white {
+  background: #fff;
+}
+
+header .icon {
+  float: left;
+  display: none;
+  margin-top: 6px;
+}
+
+header .icon.show {
+  display: block;
+}
+
+header .icon a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+header .icon img {
+  width: 100%;
+}
+
+header .blog {
+  float: right;
+}
+
+header .blog a {
+  color: #fff;
+}
+
+
+/*******************
+  Landing Page
+******************/
+
+
+#homepage {
+  width: 100%;
+  /*height: 100vh;*/
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+#homepage .info {
+  padding: 20px;
+  position: relative;
+  z-index: 20;
+}
+
+#homepage .info h1 {
+  font-size: 25px;
+  line-height: 150%;
+  font-weight: 100;
+  padding-bottom: 30px;
+}
+
+#homepage .info p + p {
+  padding-top: 10%;
+  margin-bottom: 40px;
+}
+
+#homepage .info p a {
+ padding: 0 5px;
+ color: #fff;
+ text-decoration: none;
+}
+
+#homepage .info span {
+  transition: 0.5s ease;
+}
+
+#homepage .info span + span:hover {
+  background-color: white;
+}
+
+#homepage .info p span + span a {
+  border-bottom: 1px solid #ccc;
+}
 
 
 /*******************
   Arrow
 ******************/
 
-/*.arrow {
-  width: 45px;
-  height: 45px;
+.arrow {
+  width: 40px;
+  height: 30px;
   text-indent: -9999px;
-  position: absolute;
-  left: 64px;
-  bottom: -14px;
-  background: transparent;
 }
 
-.arrow a {
-  display: block;
+.arrow .white-arrow,
+.arrow .black-arrow {
   width: 100%;
   height: 100%;
-  background: url("../images/arrow_down.png") -11px -8px;
   border: none;
-  background-size: 65px;
-}*/
+}
+
+.arrow .white-arrow {
+  display: block;
+  background: url("../images/down-arrow.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.arrow .black-arrow {
+  display: block;
+  background: url("../images/down-arrow-black.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 /*******************
-  Homepage Background Images
+  SlideShow
 ******************/
 
-/*#homepage .background-slideshow {
+.slideshow {
   display: none;
-}*/
+}
+
+/*******************
+  Main Content
+******************/
+
+
+main {
+  position: absolute;
+  top: 100vh;
+  background-color: #fff;
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 72px 30px 30px;
+  color: #000;
+  z-index: 30;
+  -webkit-transition: -webkit-transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out;
+  overflow: hidden;
+}
+
+main figure {
+  text-align: left;
+  max-width: 400px;
+}
+
+main aside {
+  margin-bottom: 10px;
+}
+
+main img {
+  width: 100%;
+}
+
+main h2 {
+  font-size: 25px;
+  text-decoration: underline;
+  padding-bottom: 20px;
+}
+
+main p {
+  font-size: 16px;
+  line-height: 150%;
+  margin-bottom: 20px;
+}
+
+main a,
+main li {
+  color: #000;
+  font-size: 16px;
+}
+
+main li, main h3 {
+  margin-bottom: 15px;
+}
+
+main ul {
+  padding-bottom: 20px;
+}
+
+main .footer,
+main .footer a {
+  font-size: 10px;
+}
+
+
+/*******************
+  Footer
+******************/
+
+footer {
+  font-size: 10px;
+}
+
+
+/*******************
+  Media Queries
+******************/
+
+@media (min-width: 375px) {
+  body {
+    font-size: 20px;
+  }
+
+  #homepage .info h1 {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 671px) {
+  /*******************
+    General
+  ******************/
+
+  .wait-cursor {
+    cursor: wait;
+  }
+
+  .indicator:after {
+    content: "\27F6";
+    display: inline-block;
+    margin-left: 10px;
+  }
+
+  .clearfix:after {
+    content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+  }
+
+  /*******************
+    Main
+  ******************/
+
+  header, main {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+
+  #homepage .info {
+    width: 52vw;
+    max-width: 720px;
+    /*height: 83vh;*/
+    margin: 0 0 0 10vw;
+    padding: 50px 0 0;
+  }
+
+  #homepage .info p a {
+    border-bottom: 1px solid #ccc;
+  }
+
+  #homepage .info h1 {
+    padding-bottom: 10%;
+  }
+
+  #homepage .info span:hover {
+    background-color: #fff;
+  }
+
+  /*******************
+    SlideShow
+  ******************/
+
+  .slideshow {
+    display: block;
+  }
+
+  .desktop {
+    display: block;
+  }
+
+  /*******************
+    Main Overlay
+  ******************/
+
+  main h2, main h3 {
+    margin-bottom: 20px;
+  }
+
+  main section {
+    position: relative;
+    padding-bottom: 40px;
+  }
+
+  main article {
+    width: 55%;
+    float: left;
+  }
+
+  main aside {
+    width: 45%;
+    float: right;
+    height: 100%;
+    position: absolute;
+    right: 0;
+  }
+
+  main figure {
+    margin-left: 20px;
+    font-size: 20px;
+    float: right;
+    max-width: 420px;
+  }
+
+  main figure + figure {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  main p {
+    max-width: 460px;
+    font-size: 18px;
+    line-height: 160%;
+    margin-bottom: 40px;
+  }
+
+  main ul li {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 670px) {
+  span:first-child .hover-effect:hover {
+    -webkit-text-fill-color: white !important;
+  }
+}
+
+@media (min-width: 1441px) {
+  body {
+    font-size: 2.5em;
+  }
+
+  header .blog {
+    margin-top: 65px;
+  }
+
+  header .icon {
+    margin-top: 50px;
+  }
+
+  #homepage .info {
+    max-width: 1100px;
+    padding-top: 250px;
+  }
+
+  #homepage .info h1 {
+    font-size: 1.8em;
+  }
+
+  .slideshow {
+    top: 50vw;
+  }
+
+  .arrow .white-arrow, .arrow {
+    width: 100px;
+    height: 80px;
+  }
+
+  main {
+    padding-top: 170px;
+  }
+
+  main h2, main h3 {
+    font-size: 1.2em;
+  }
+
+  main p, main a, main li {
+    font-size: 0.9em;
+  }
+
+  main p {
+    max-width: 960px;
+  }
+
+  main figure {
+    max-width: 720px;
+  }
+}
