@@ -92,10 +92,6 @@ header .blog {
   justify-content: space-around;
 }
 
-header .blog > a {
-  /*margin-right: 10px;*/
-}
-
 header .blog a {
   color: #fff;
 }
@@ -108,7 +104,6 @@ header .blog a {
 
 #homepage {
   width: 100%;
-  /*height: 100vh;*/
   position: relative;
   padding: 0;
   margin: 0;
@@ -135,7 +130,6 @@ header .blog a {
 #homepage .info p a {
  padding: 0 5px;
  color: #fff;
- text-decoration: none;
 }
 
 #homepage .info span {
@@ -186,6 +180,12 @@ header .blog a {
   Main Content
 ******************/
 
+.sectional {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+  margin-bottom: 20px;
+}
 
 main {
   position: absolute;
@@ -276,6 +276,10 @@ footer {
   #homepage .info h1 {
     font-size: 36px;
   }
+
+  #homepage .info p a {
+   text-decoration: underline;
+  }
 }
 
 @media (min-width: 671px) {
@@ -325,6 +329,7 @@ footer {
 
   #homepage .info p a {
     border-bottom: 1px solid #ccc;
+    text-decoration: none;
   }
 
   #homepage .info h1 {
@@ -344,9 +349,7 @@ footer {
   }
 
   .sectional {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    flex-direction: row;
   }
 
   main article {
