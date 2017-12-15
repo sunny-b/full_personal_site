@@ -42,6 +42,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 /*******************
   Header
 ******************/
@@ -54,6 +58,8 @@ header {
   margin-bottom: 20px;
   position: fixed;
   z-index: 100;
+  display: flex;
+  justify-content: space-between;
   transition: background-color 0.5s ease;
 }
 
@@ -62,13 +68,12 @@ header.white {
 }
 
 header .icon {
-  float: left;
-  display: none;
+  visibility: hidden;
   margin-top: 6px;
 }
 
 header .icon.show {
-  display: block;
+  visibility: visible;
 }
 
 header .icon a {
@@ -82,7 +87,13 @@ header .icon img {
 }
 
 header .blog {
-  float: right;
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+}
+
+header .blog > a {
+  /*margin-right: 10px;*/
 }
 
 header .blog a {
@@ -172,14 +183,6 @@ header .blog a {
 }
 
 /*******************
-  SlideShow
-******************/
-
-.slideshow {
-  display: none;
-}
-
-/*******************
   Main Content
 ******************/
 
@@ -200,11 +203,6 @@ main {
 
 main figure {
   text-align: left;
-  max-width: 400px;
-}
-
-main aside {
-  margin-bottom: 10px;
 }
 
 main img {
@@ -217,10 +215,16 @@ main h2 {
   padding-bottom: 20px;
 }
 
+main h3 {
+  text-decoration: underline;
+  font-size: 20px;
+  font-weight: bold;
+}
+
 main p {
   font-size: 16px;
   line-height: 150%;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 main a,
@@ -240,6 +244,14 @@ main ul {
 main .footer,
 main .footer a {
   font-size: 10px;
+}
+
+.about figure {
+  max-width: 332px;
+}
+
+.max figure {
+  max-width: 550px;
 }
 
 
@@ -293,6 +305,11 @@ footer {
     Main
   ******************/
 
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
   header, main {
     padding-left: 10vw;
     padding-right: 10vw;
@@ -319,18 +336,6 @@ footer {
   }
 
   /*******************
-    SlideShow
-  ******************/
-
-  .slideshow {
-    display: block;
-  }
-
-  .desktop {
-    display: block;
-  }
-
-  /*******************
     Main Overlay
   ******************/
 
@@ -338,42 +343,27 @@ footer {
     margin-bottom: 20px;
   }
 
-  main section {
-    position: relative;
-    padding-bottom: 40px;
+  .sectional {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
   }
 
   main article {
-    width: 55%;
-    float: left;
-  }
-
-  main aside {
-    width: 45%;
-    float: right;
-    height: 100%;
-    position: absolute;
-    right: 0;
+    display: flex;
+    flex-direction: column;
   }
 
   main figure {
     margin-left: 20px;
     font-size: 20px;
-    float: right;
-    max-width: 420px;
-  }
-
-  main figure + figure {
-    position: absolute;
-    bottom: 0;
-    right: 0;
   }
 
   main p {
     max-width: 460px;
     font-size: 18px;
     line-height: 160%;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   main ul li {
@@ -407,10 +397,6 @@ footer {
 
   #homepage .info h1 {
     font-size: 1.8em;
-  }
-
-  .slideshow {
-    top: 50vw;
   }
 
   .arrow .white-arrow, .arrow {
