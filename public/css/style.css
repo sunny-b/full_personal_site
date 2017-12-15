@@ -188,6 +188,11 @@ header .blog a {
   margin-bottom: 20px;
 }
 
+.sunny {
+  transform: scaleX(-1);
+  filter: FlipH;
+}
+
 main {
   position: absolute;
   top: 100vh;
