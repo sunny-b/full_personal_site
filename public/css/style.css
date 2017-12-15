@@ -336,7 +336,7 @@ footer {
     padding-bottom: 10%;
   }
 
-  #homepage .info span:hover {
+  .white-back:hover {
     background-color: #fff;
   }
 
