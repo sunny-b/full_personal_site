@@ -130,6 +130,7 @@ header .blog a {
 #homepage .info p a {
  padding: 0 5px;
  color: #fff;
+ text-decoration: underline;
 }
 
 #homepage .info span {
@@ -275,10 +276,6 @@ footer {
 
   #homepage .info h1 {
     font-size: 36px;
-  }
-
-  #homepage .info p a {
-   text-decoration: underline;
   }
 }
 
