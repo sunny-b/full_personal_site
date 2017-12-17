@@ -105,7 +105,8 @@ $(document).ready(function() {
     // Add background gradient
     $('.gradient').css({ background: "-webkit-gradient(linear, left top, right top, from(" + colorLeft + "), to(" + colorRight + "))" })
                   .css({ background: "-moz-linear-gradient(left, " + colorLeft + " 0%, " + colorRight + " 100%)" });
-    $('main a, a.hover-effect').hover(function() {
+
+    $('a.hover-effect').hover(function() {
       $(this).css({ background: "-webkit-gradient(linear, left top, right top, from(" + colorLeft + "), to(" + colorRight + "))" })
              .css({ background: "-moz-linear-gradient(left, " + colorLeft + " 0%, " + colorRight + " 100%)" })
              .css({ webkitBackgroundClip: 'text' })
