@@ -246,6 +246,7 @@ main figure {
 
 main img {
   width: 100%;
+  border-radius: 20px;
 }
 
 main h2 {
