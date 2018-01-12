@@ -9,7 +9,7 @@ $(document).ready(function() {
                           [96, 37, 46],
                           [23, 93, 109] );
   var step = 0;
-  var gradientSpeed = 0.1;
+  var gradientSpeed = 0.02;
   var colorIndices = [];
 
   for (var i = 0; i < 5; i++) {
