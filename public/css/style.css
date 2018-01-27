@@ -291,6 +291,25 @@ main .footer a {
   max-width: 550px;
 }
 
+.frame-container {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  width:100%;
+}
+
+.frame-container iframe {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.text {
+  padding-top: 15px;
+}
 
 /*******************
   Footer
