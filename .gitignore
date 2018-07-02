@@ -2,3 +2,4 @@
 app/Gemfile.lock
 app/public/fonts
 app/public/images
+.gitignore
