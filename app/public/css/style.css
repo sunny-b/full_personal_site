@@ -197,14 +197,14 @@ header .blog a {
 
 .arrow .white-arrow {
   display: block;
-  background: url("../images/down-arrow.svg");
+  background: url("https://personal-site-assets.sfo2.cdn.digitaloceanspaces.com/public/images/down-arrow.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .arrow .black-arrow {
   display: block;
-  background: url("../images/down-arrow-black.svg");
+  background: url("https://personal-site-assets.sfo2.cdn.digitaloceanspaces.com/public/images/down-arrow-black.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }

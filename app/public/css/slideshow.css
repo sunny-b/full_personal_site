@@ -35,10 +35,10 @@ ul.full-stack.active span {
 }
 
 ul.full-stack.active li:nth-child(1) span {
-  background-image: url(../images/main_exhibit_edited.png);
+  background-image: url(https://personal-site-assets.sfo2.cdn.digitaloceanspaces.com/public/images/main_exhibit_edited.png);
 }
 ul.full-stack.active li:nth-child(2) span {
-  background-image: url(../images/main_theo.png);
+  background-image: url(https://personal-site-assets.sfo2.cdn.digitaloceanspaces.com/public/images/main_theo.png);
   -webkit-animation-delay: 4s;
   -moz-animation-delay: 4s;
   -o-animation-delay: 4s;
@@ -46,7 +46,7 @@ ul.full-stack.active li:nth-child(2) span {
   animation-delay: 4s;
 }
 ul.full-stack.active li:nth-child(3) span {
-  background-image: url(../images/main_dotufo_edited.png);
+  background-image: url(https://personal-site-assets.sfo2.cdn.digitaloceanspaces.com/public/images/main_dotufo_edited.png);
   -webkit-animation-delay: 7s;
   -moz-animation-delay: 7s;
   -o-animation-delay: 7s;
@@ -54,7 +54,7 @@ ul.full-stack.active li:nth-child(3) span {
   animation-delay: 7s;
 }
 ul.full-stack.active li:nth-child(4) span {
-  background-image: url(../images/main_shake_edited.png);
+  background-image: url(https://personal-site-assets.sfo2.cdn.digitaloceanspaces.com/public/images/main_shake_edited.png);
   -webkit-animation-delay: 10s;
   -moz-animation-delay: 10s;
   -o-animation-delay: 10s;
@@ -62,7 +62,7 @@ ul.full-stack.active li:nth-child(4) span {
   animation-delay: 10s;
 }
 ul.full-stack.active li:nth-child(5) span {
-  background-image: url(../images/main_zaha_edited.png);
+  background-image: url(https://personal-site-assets.sfo2.cdn.digitaloceanspaces.com/public/images/main_zaha_edited.png);
   -webkit-animation-delay: 13s;
   -moz-animation-delay: 13s;
   -o-animation-delay: 13s;
@@ -70,7 +70,7 @@ ul.full-stack.active li:nth-child(5) span {
   animation-delay: 13s;
 }
 ul.full-stack.active li:nth-child(6) span {
-  background-image: url(../images/main_finger_edited.png);
+  background-image: url(https://personal-site-assets.sfo2.cdn.digitaloceanspaces.com/public/images/main_finger_edited.png);
   -webkit-animation-delay: 16s;
   -moz-animation-delay: 16s;
   -o-animation-delay: 16s;
@@ -78,7 +78,7 @@ ul.full-stack.active li:nth-child(6) span {
   animation-delay: 16s;
 }
 ul.full-stack.active li:nth-child(7) span {
-  background-image: url(../images/gallery_edited.png);
+  background-image: url(https://personal-site-assets.sfo2.cdn.digitaloceanspaces.com/public/images/gallery_edited.png);
   -webkit-animation-delay: 19s;
   -moz-animation-delay: 19s;
   -o-animation-delay: 19s;
@@ -86,7 +86,7 @@ ul.full-stack.active li:nth-child(7) span {
   animation-delay: 19s;
 }
 ul.full-stack.active li:nth-child(8) span {
-  background-image: url(../images/ropetype_edited.png);
+  background-image: url(https://personal-site-assets.sfo2.cdn.digitaloceanspaces.com/public/images/ropetype_edited.png);
   -webkit-animation-delay: 22s;
   -moz-animation-delay: 22s;
   -o-animation-delay: 22s;
@@ -94,7 +94,7 @@ ul.full-stack.active li:nth-child(8) span {
   animation-delay: 22s;
 }
 ul.full-stack.active li:nth-child(9) span {
-  background-image: url(../images/last_ropetype_edited.png);
+  background-image: url(https://personal-site-assets.sfo2.cdn.digitaloceanspaces.com/public/images/last_ropetype_edited.png);
   -webkit-animation-delay: 25s;
   -moz-animation-delay: 25s;
   -o-animation-delay: 25s;
@@ -103,7 +103,7 @@ ul.full-stack.active li:nth-child(9) span {
 }
 
 ul.full-stack.active li:nth-child(10) span {
-  background-image: url(../images/whackaruby.gif);
+  background-image: url(https://personal-site-assets.sfo2.cdn.digitaloceanspaces.com/public/images/whackaruby.gif);
   -webkit-animation-delay: 28s;
   -moz-animation-delay: 28s;
   -o-animation-delay: 28s;
